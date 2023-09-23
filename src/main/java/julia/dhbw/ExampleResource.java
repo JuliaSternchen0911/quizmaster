@@ -41,7 +41,7 @@ public class ExampleResource {
             Connection con = DriverManager.getConnection(url, user, pass);
             Statement stmt = con.createStatement();
             String sql = "SELECT * FROM  frage f JOIN antwort a ON f.id = a.frageId";
-            //definiert eine SQL-Abfrage, die Daten aus den Tabellen "frage" und "antwort" abruft und miteinander verknüpft.
+            //definiert eine SQL-Abfrage, die Daten aus den Tabellen "frage" und "antwort" abruft und miteinander verknüpft
             ResultSet rs = stmt.executeQuery(sql);
 
             JsonArrayBuilder jsonArrayBuilder = Json.createArrayBuilder();
